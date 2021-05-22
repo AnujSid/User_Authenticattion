@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container w-25 text-center" style="margin-top: 200px;">
+		<h1>
+			Login Page
+		</h1>
+		<form action="/login" method="POST">
+			<input type="text" placeholder="username" class="form-control mb-2" name="username">
+			<input type="password" class="form-control mb-2" placeholder="password" name="password">
+			<button type="submit" class="btn btn-primary form-control mb-2">Login</button>
+			<a href="/register" class="btn btn-success form-control" >Register</a>
+		</form>
+	</div>
+</body>
+</html>
+
