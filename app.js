@@ -6,9 +6,9 @@ var express  =require("express"),
 	localStrategy=require("passport-local").Strategy,  
 	passportLocalMongoose=require("passport-local-mongoose"),
 	methodOverride = require('method-override'),
-    app=express();	
-
-mongoose.connect('mongodb://localhost:27017/auth_user', {useNewUrlParser: true, useUnifiedTopology: true})
+        app=express();	
+const url="mongodb+srv://anujsid596:mother1234@cluster0.kpmeh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"||"mongodb://localhost:27017/auth_user";
+mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
 .then(()=>{
 	console.log("connected");
 })
@@ -103,6 +103,6 @@ function isLoggedIn(req,res,next){
 	res.redirect("/login");
 }
 
-app.listen(3000,function(){
+app.listen(process.env.PORT||3000,function(){
 	console.log("server started");
 })
